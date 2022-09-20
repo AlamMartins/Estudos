@@ -44,11 +44,30 @@ const pessoa3 = {
     }
 };
 
-pessoa3.fala();
+// pessoa3.fala();
 
-pessoa3.incrementaIdade();
-pessoa3.fala();
+// pessoa3.incrementaIdade();
+// pessoa3.fala();
 
-pessoa3.incrementaIdade();
-pessoa3.fala();
+// pessoa3.incrementaIdade();
+// pessoa3.fala();
 
+
+// *************************** Abreviação do inicializador de propriedade do objeto  ***************************
+
+let nome =  'Alam',
+   sobrenome = 'Morais';
+
+let dados = {
+    nome,
+    sobrenome,
+
+    nomecompleto(){
+        console.log(`Primeiro Nome: ${this.nome} / SobreNome: ${this.sobrenome}`);
+    }
+};
+
+dados.nomecompleto();
+
+
+// *************************** Nome da propriedade computada  ***************************
