@@ -1,0 +1,86 @@
+/* Import Fonte Open Sans do Google Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Criação das variáveis*/
+:root{
+    --primary-color: rgb(17, 86, 102);
+    --primary-color-dark: rgb(9, 48, 56);
+ }
+ 
+ /* Aplicando em todas as TAGS (GLOBAL) */
+ *{
+box-sizing: border-box;
+outline: 0;
+
+ }
+
+ /* Estilizando o Body */
+ body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+ }
+
+ /* Estilizando o Container */
+ .container {
+    max-width: 640px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+ }
+
+ /* Configuração Geral para Input/Label/Button */
+ form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+
+ }
+
+/* Style do botão */
+ form input{
+    font-size:  24px;
+    height: 50px;
+    padding: 0 20px;
+ }
+
+ /* Foco no input quando é clicado */
+ form input:focus{
+    outline: 1px solid var(--primary-color);
+ }
+
+ /* Style do Botão */
+ form button {
+    border: none;
+    background: var(--primary-color);
+    color:#ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+ }
+
+ /* ALtera a cor quando passa a setinha em cima do  botão */
+ form button:hover {
+    background: var(--primary-color-dark);
+ }
+
+ /* ALtera a cor quando clica no botão */
+ /* form button:active{
+    background: #f8f8f8;
+ } */
+
+ /* Atribuindo a cor verde no .paragrafo-resultado */
+ .paragrafo-resultado, .bad{
+   background: rgb(109, 255, 182);
+   padding: 10px 20px;
+ }
+
+.bad{
+   background: rgba(185, 28, 17, 0.682);
+}
