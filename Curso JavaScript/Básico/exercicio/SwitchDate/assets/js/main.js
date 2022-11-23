@@ -82,33 +82,66 @@
 
 const ficando = document.getElementById('dataFicando');
 const namorando = document.getElementById('dataNamorando');
-const difNamorando = document.getElementById('difFicandoNamorando');
 const difFicando = document.getElementById('difFicando');
+const difNamorando = document.getElementById('difFicandoNamorando');
+const timeFicando = document.getElementById('timeFicando');
+const timeNamorando = document.getElementById('timeNamorando');
 
 const data = new Date();
-const dataInicio = new Date('2021-02-07 19:00:00');
-const dataInicioNamoro = new Date('2021-04-21 19:00:00');
+const dataInicio = new Date('2021-02-07 18:00:00');
+const dataInicioNamoro = new Date('2021-04-21 21:00:00');
 const diferencaFicando = data - dataInicio;
 const diferencaDataNamoro = data - dataInicioNamoro;
 
+//Calculando quantidade de Horas
+const umaHora = 1000*60*60;
+const resultadoHorasNamorando = Math.ceil((data - dataInicioNamoro) / umaHora);
+const resultadoHorasFicando = Math.ceil((data - diferencaFicando) / umaHora);
+
+//calculando o tempo entre 02 datas - Ficando
+const diffPrimeiroEncontro   = new Date(data) - new Date(dataInicio);
+const diffInDaysPE = Math.ceil(diffPrimeiroEncontro / (1000 * 60 * 60 * 24));
+
+//Namorando
+const diffNamorando   = new Date(data) - new Date(dataInicioNamoro);
+const diffInDaysNam = Math.ceil(diffNamorando / (1000 * 60 * 60 * 24));
+
+
+
 function showTime(){
-    let time = new Date();
-    let horas = tiem.gethours();
-    let minutos = time.getMinutes();
-    let segundos = time.getSeconds();
+    let data = new Date();
+    let dataInicio = new Date('2021-02-07 18:30:00');
+    let dataInicioNamoro = new Date('2021-04-21 20:00:00');
+
+let umaHora = 1000*60*60;
+let calcminutos = 1000*60*60;
+
+let resultadoHorasNamorando = Math.ceil((data - dataInicioNamoro) / umaHora);
+let resultadoHorasFicando = Math.ceil((data - dataInicio) / umaHora);
+
+
+    let horas = data.getHours();
+    let minutos = data.getMinutes();
+    let segundos = data.getSeconds();
 
     if(horas<10) horas = "0"+horas;
     if(minutos<10) minutos = "0"+minutos;
     if(segundos<10) segundos = "0"+segundos;
 
-    let tempo = horas+":"+minutos+":"+segundos;
+    let tempoFicando = ((horas + resultadoHorasFicando)-21)+":"+minutos+":"+segundos;
+    
+    let tempoNamorando = ((horas + resultadoHorasNamorando)-21)+":"+(minutos+8)+":"+segundos;
 
-    document.getElementById('difFicandoNamorando').innerHTML = tempo;
+     document.getElementById("timeFicando").innerHTML=`Tempo ficando: ${tempoFicando}`;
+     document.getElementById("timeNamorando").innerHTML=`Tempo Namorando: ${tempoNamorando}`;
 }
 
-function initTime(){
-    setInterval(showTime,1000);
-}
+var timer = setInterval(showTime,1000);
+
+
+
+
+// -----------------------------
 
 ficando.innerHTML = `O Primeiro Encontro foi no `+ dataInicio.toLocaleString('pt-BR', {
          dateStyle: 'full'
@@ -118,6 +151,13 @@ namorando.innerHTML = `Começamos namorar na `+ dataInicioNamoro.toLocaleString(
         dateStyle: 'full'
     });
 
-difFicando.innerHTML = `tempo do primeiro encontro:`;
-difNamorando.innerHTML = `tempo namorando:` ;
+difFicando.innerHTML = `Qtd de dias do primeiro encontro: ${diffInDaysPE}`;
+difNamorando.innerHTML = `Qtd de dias namorando: ${diffInDaysNam}`;
+// timeFicando.innerHTML = `Horas Ficando: ${resultadoHorasFicando}`;
+// timeNamorando.innerHTML = `Horas Namorando: ${resultadoHorasNamorando}`;
+
+
+
+console.log(resultado);
+
 
