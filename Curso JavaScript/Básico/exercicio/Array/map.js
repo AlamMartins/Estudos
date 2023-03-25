@@ -28,9 +28,11 @@ const todosNomes = pessoas.map(function(obj){
 
 //SELECIONANDO APENAS OS NOMES COM MAP (ARROW FUNCTION)
 // const todosNomesAFobj = pessoas.map(obj => console.log(obj.nome));
-const todosNomesAFlist = pessoas.map(obj => obj.nome);
+const todosNomesAFlist = pessoas.map(obj => obj.nome === 'Maria');
 
-//  console.log(todosNomesAFlist)
+
+
+  console.log(todosNomesAFlist)
 
 //deletando nomes para exibir somente idade
 const idades = pessoas.map(function(obj){ 
@@ -41,19 +43,19 @@ const idades = pessoas.map(function(obj){
 
 const idades2 = pessoas.map(obj => ({ idade: obj.idade}))
 
-// console.log(idades2)
+//  console.log(idades2)
 
 
 //---------------------------------------------------------------------
 
-const comIds = pessoas.map(function(obj, indice){
-    // obj.id = indice + 1;
-    // return obj;
+// const comIds = pessoas.map(function(obj, indice){
+//     // obj.id = indice + 1;
+//     // return obj;
 
-    const newObj = {...obj};
-    newObj.id = indice;
-    return newObj;
-});
+//     const newObj = {...obj};
+//     newObj.id = indice;
+//     return newObj;
+// });
 
-console.log(pessoas);
-console.log(comIds);
+// console.log(pessoas);
+// console.log(comIds);

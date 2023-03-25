@@ -25,16 +25,23 @@ var pessoas2 =  [
 
 // console.log(pessoas2)
 
+
+var arrayFinal = [];
+
+
 function comparar(pessoas, pessoas2){
 
     pessoas.forEach(function(el1){
-        pessoas2.forEach(function(el2){
-            if(el1.idade >= 50){
-                return console.log(el1)
+        pessoas2.forEach(function(e2){
+
+            if(el1.idade > 50){
+                // return console.log(el1)
+                arrayFinal.push(el1)
             }
+
         })
     });
-
+    console.log(JSON.stringify(arrayFinal))
 
 }
 
