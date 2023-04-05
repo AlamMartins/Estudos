@@ -41,10 +41,10 @@ function comparar(pessoas, pessoas2){
 
         })
     });
-    console.log(JSON.stringify(arrayFinal))
-
+    
 }
 
+console.log(JSON.stringify(arrayFinal))
 comparar(pessoas,pessoas2)
 
 
