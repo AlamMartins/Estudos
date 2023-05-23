@@ -60,6 +60,7 @@ class ValidarFormulario{
     //Loop para informar os campos que estão em branco e não foram preenchidos
     for(let campo of this.formulario.querySelectorAll('.validar')){
       const label = campo.previousElementSibling.innerText;
+      
       if(!campo.value){
         this.criaErro(campo,`Campo ${label} não pode estar em branco.`)
         valid = false;

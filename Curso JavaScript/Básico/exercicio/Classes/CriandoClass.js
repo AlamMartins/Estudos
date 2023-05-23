@@ -10,6 +10,10 @@ class Pessoa {
 
 }
 
+
+
+
+
 function Pessoa2(nome, sobrenome){
     this.nome = nome;
     this.sobrenome = sobrenome;
@@ -20,7 +24,7 @@ Pessoa2.prototype.falar = function(){
 }
 
 const p1 = new Pessoa('Alam','Martins');
-const p2 = new Pessoa('Nathália','Reis');
+const p2 = new Pessoa2('Nathália','Reis');
 
 p1.falar()
 p2.falar()

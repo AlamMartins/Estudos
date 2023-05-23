@@ -44,3 +44,31 @@ const c1 = new Carro('Fusca')
 c1.velocidade = 99
 console.log(c1.velocidade)
 
+
+//-----------------------------------------------
+
+
+
+
+class Pessoa {
+    constructor(nome,sobrenome){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
+   get nomeCompleto() {
+        return this.nome +' '+this.sobrenome
+    }
+
+    set nomeCompleto(valor){
+        valor = valor.split(' ');
+        this.nome = valor.shift();
+        this.sobrenome =  valor.join(' ');
+    }
+}
+
+const p1 = new Pessoa('Alam','Martins') 
+p1.nomeCompleto = 'Alam Martins Morais'//SETTER
+
+console.log(p1.nome) //GETTER
+console.log(p1.sobrenome) //GETTER

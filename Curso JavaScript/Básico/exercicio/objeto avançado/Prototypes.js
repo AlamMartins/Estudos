@@ -68,4 +68,4 @@ const p3= Object.create(Produto.prototype,{
 
 p3.aumento(10)
 
-// console.log(p3)
+console.log(p3)
